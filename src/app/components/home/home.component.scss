@@ -1,0 +1,29 @@
+
+.container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.thead-dark {
+    background: rgb(0,139,64,.8);
+}
+
+th {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+tr { 
+    border-width: 0.5px;
+    border-color: black;
+}
+
+td { 
+    padding: 20px;
+}
+
+.centerText {
+    text-align: center;
+}
