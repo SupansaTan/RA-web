@@ -1,0 +1,36 @@
+
+.container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.thead-dark {
+    background: rgb(190, 231, 209);
+}
+
+th {
+    color: black;
+    text-align: center;
+}
+
+tr { 
+    border-width: 0.5px;
+    border-color: black;
+}
+
+td { 
+    padding: 10px;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.fontMirt {
+    font-family: 'Mitr', sans-serif;
+}
+
+.fontSarabun {
+    font-family: 'Sarabun', sans-serif;
+}

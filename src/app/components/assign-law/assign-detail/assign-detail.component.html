@@ -1,0 +1,52 @@
+
+
+<div class="container">
+
+    <div class="selectitem fontMitr">
+        <label  class="col-sm-2 col-form-label">ระบบที่เกี่ยวข้อง</label>
+        <ngx-bootstrap-multiselect [options]="systemOptions" [(ngModel)]="systemModel" (ngModelChange)="onChange"></ngx-bootstrap-multiselect>
+    </div>
+
+    <ng-template #content let-modal>
+        <div class="modal-header fontMitr row" style="margin-inline:5px;">
+            <label style="margin-bottom: 5px;">รายชื่อสายงาน</label>
+            <input type="text" >
+        </div>
+        <div class="modal-body fontMitr">
+            <div class="fontMitr" *ngFor="let item of BusinessLineData">
+                <input type="checkbox" [(ngModel)]='item.checked'>
+                <label style="margin-left: 10px;">{{item.businessLine}}</label>
+            </div>
+        </div>
+        <div class="modal-footer fontMitr">
+            <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <div class="fontMitr" style="margin-top: 20px;">
+        <label>สายงาน (Business Line)</label>
+        <button class="btn btn-outline-primary mb-2 me-2 modalbt" (click)="openVerticallyCentered(content)">เลือกสายงาน</button>
+    </div>
+
+
+    <table mat-table class="tables">
+        <thead class="thead-dark">
+        <tr class="fontSarabun">
+            <th scope="col"><input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)"></th>
+            <th scope="col">โรงงาน</th>
+            <th scope="col">ประเภทธุรกิจ</th>
+            <th scope="col">สายงาน</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="fontSarabun" *ngFor="let item of LocationData">
+            <td class="centerText"><input type="checkbox" [(ngModel)]='item.checked'></td>
+            <td class="centerText">{{item.location}}</td>
+            <td class="centerText">{{item.business}}</td>
+            <td class="centerText">{{item.businessLine}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary submitbt fontMitr">มอบหมายงาน</button>
+</div>
