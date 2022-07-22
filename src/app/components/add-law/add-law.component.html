@@ -1,1 +1,129 @@
-<p>add-law works!</p>
+<script src="multiselect-dropdown.js" ></script>
+
+<div class="container">
+    <h4 class="fontMirt">เพิ่มกฎหมายใหม่</h4>
+    <form class="fontMirt">
+        <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">หมวดประเภทกฎหมาย</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLawName" placeholder="กฎหมายในประเทศ">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">ประเภทกฎหมาย</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputAct" placeholder="กระทรวงแรงงาน">
+            </div>
+        </div>
+         <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">ประเภทพระราชบัญญัติ</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLegisUnit" placeholder="พระราชบัญญัติความปลอดภัย 2554">
+            </div>
+        </div>
+        <div class="input-group searchitem">
+            <label  class="col-sm-2 col-form-label">ประเภทกฏกระทรวง/ระเบียบ/ประกาศ</label>
+            <select id="inputType" class="form-control" style="border-radius: 5px; margin-left: 3px;">
+                <option selected>Choose...</option>
+                <option>กฎกระทรวง</option>
+                <option>ระเบียบ</option>
+                <option>ประกาศ</option>
+            </select> 
+        </div>
+        <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">ชื่อกฎหมาย</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLegisUnit" placeholder="ชื่อกฎหมาย">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <div class="input-group" style="border-radius: 10px; margin-left: 3px;">
+                <label  class="col-sm-2 col-form-label">วันที่ประกาศ</label>
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="d1" ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <div class="input-group" style="border-radius: 10px; margin-left: 3px;">
+                <label  class="col-sm-2 col-form-label">วันที่มีผลบังคับใช้</label>
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="d2" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()">
+            </div>
+        </div>
+
+    </form>
+
+    <div class="fontMirt">
+        <div class="searchitem">
+            <label  class="col-sm-2 col-form-label">ระบบที่เกี่ยวข้อง</label>
+            <ngx-bootstrap-multiselect [options]="systemOptions" [(ngModel)]="systemModel" (ngModelChange)="onChange"></ngx-bootstrap-multiselect>
+        </div>
+        <div class="searchitem">
+            <label  class="col-sm-2 col-form-label">ธุรกิจที่เกี่ยวข้อง</label>
+            <ngx-bootstrap-multiselect [options]="businessOptions" [(ngModel)]="businessModel" (ngModelChange)="onChange"></ngx-bootstrap-multiselect>
+        </div>
+
+        <div class="mb-3" style="margin-top: 40px;">
+            <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <div style="margin-top: 40px;">
+            <label>สาระสำคัญ</label>
+        </div>
+
+
+        <form>
+            <div class="row" style="margin-top: 10px; margin-bottom: 10px; flex-direction: row;">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="สาระสำคัญ">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="เกณฑ์ชี้วัดความสอดคล้อง">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="ความถี่ในการปฏิบัติ">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="แนวทางปฏิบัติเพื่อให้สอดคล้อง">
+                </div>
+                <div class="col-1">
+                    <span class="material-icons-sharp">add_circle</span> 
+                </div>
+                
+            </div>
+        </form>
+
+        <div>
+            <table class="tables">
+                <thead class="thead-dark">
+                <tr class="fontSarabun">
+                    <th scope="col">สาระสำคัญ</th>
+                    <th scope="col">เกณฑ์ชี้วัดความสอดคล้อง</th>
+                    <th scope="col">ความถี่ในการปฏิบัติ</th>
+                    <th scope="col">แนวทางปฏิบัติเพื่อให้สอดคล้อง</th>
+                    <th ></th>
+                    <th ></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="fontSarabun">
+                    <td>ให้ยกเลิกกฎกระทรวงกำหนดมาตรฐานในการบริหารและการจัดการด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานเกี่ยวกับรังสีชนิดก่อไอออน พ.ศ. 2547</td>
+                    <td class="centerText">-</td>
+                    <td class="centerText">-</td>
+                    <td class="centerText">เพื่อทราบ</td>
+                    <td> 
+                        <span class="material-icons-sharp">edit</span>  
+                    </td>
+                    <td> 
+                        <span class="material-icons-sharp">delete</span> 
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">ต่อไป</button>
+    
+</div>
