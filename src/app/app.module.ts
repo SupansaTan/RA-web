@@ -13,6 +13,8 @@ import { ConfigLocationComponent } from './components/config-location/config-loc
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    NgxBootstrapMultiselectModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
