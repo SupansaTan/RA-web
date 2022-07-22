@@ -59,6 +59,6 @@ export class AddLawComponent implements OnInit {
 
   onChange() {
     console.log(this.systemModel);
-}
+  }
 
 }
