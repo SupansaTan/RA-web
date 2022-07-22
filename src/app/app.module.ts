@@ -12,6 +12,7 @@ import { ConfigEmployeeComponent } from './components/config-employee/config-emp
 import { ConfigLocationComponent } from './components/config-location/config-location.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,12 @@ import { HeaderComponent } from './components/header/header.component';
     ConfigEmployeeComponent,
     ConfigLocationComponent,
     SignInComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

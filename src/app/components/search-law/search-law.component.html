@@ -1,1 +1,54 @@
-<p>search-law works!</p>
+<div class="container font">
+    <h4>ค้นหากฎหมายและข้อกำหนดอื่นๆ ของ CPF</h4>
+    <form>
+        <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">ชื่อกฎหมาย</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLawName" placeholder="ชื่อกฎหมาย">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">พระราชบัญญัติ</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputAct" placeholder="พระราชบัญญัติ">
+            </div>
+        </div>
+        <div class="input-group searchitem">
+            <label  class="col-sm-2 col-form-label">ประเภทกฎหมาย/ข้อกำหนด</label>
+            <select id="inputType" class="form-control" style="border-radius: 5px; margin-left: 3px;">
+                <option selected>Choose...</option>
+                <option>กฎกระทรวง</option>
+                <option>ประกาศ</option>
+            </select> 
+        </div>
+        <div class="form-group row searchitem">
+            <label  class="col-sm-2 col-form-label">กระทรวง</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLegisUnit" placeholder="กระทรวง">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <div class="input-group" style="border-radius: 10px; margin-left: 3px;">
+                <label  class="col-sm-2 col-form-label">วันที่ประกาศ</label>
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="d1" ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <div class="input-group" style="border-radius: 10px; margin-left: 3px;">
+                <label  class="col-sm-2 col-form-label">วันที่มีผลบังคับใช้</label>
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="d2" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()">
+            </div>
+        </div>
+        <div class="form-group row searchitem">
+            <div class="input-group" style="border-radius: 10px; margin-left: 3px;">
+                <label  class="col-sm-2 col-form-label">วันที่ยกเลิก</label>
+                <input class="form-control" placeholder="dd/mm/yyyy"
+                    name="d3" ngbDatepicker #d3="ngbDatepicker" (click)="d3.toggle()">
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">ค้นหา</button>
+    </form>
+</div>
