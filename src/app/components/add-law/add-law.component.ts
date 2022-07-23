@@ -50,6 +50,11 @@ export class AddLawComponent implements OnInit {
     { id: 6, name: 'Other'}
   ];
 
+  KeyactData: KetactElement[] = [
+    {id:1, keyreq:'A', standard:'AAA', frequency:'ทุก 1 ปี', practice:'action1'},
+    {id:2, keyreq:'B', standard:'BBB', frequency:'ทุก 2 ปี', practice:'action2'}
+  ];
+
   constructor() {
 
   }
@@ -62,3 +67,12 @@ export class AddLawComponent implements OnInit {
   }
 
 }
+
+export interface KetactElement {
+  id: number;
+  keyreq: string;
+  standard: string;
+  frequency: string;
+  practice: string;
+}
+

@@ -1,0 +1,71 @@
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.fontMirt {
+    font-family: 'Mitr', sans-serif;
+}
+
+.fontSarabun {
+    font-family: 'Sarabun', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.material-icons {
+    vertical-align:sub; 
+}
+
+select {
+    margin-block: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 10%;
+    text-align: center;
+}
+
+button {
+    margin-inline: 10px;
+    border-radius: 10px;
+    padding-inline: 20px;
+    border-color: darkgray;
+}
+
+input {
+    border-radius: 5px;
+    width: 50%;
+    border-color: darkgray;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+.thead-dark {
+    background: rgb(190, 231, 209);
+}
+
+th {
+    color: black;
+    text-align: center;
+}
+
+tr { 
+    border-width: 0.5px;
+    border-color: black;
+}
+
+td { 
+    padding: 10px;
+}
+
+.centerText {
+    text-align: center;
+}

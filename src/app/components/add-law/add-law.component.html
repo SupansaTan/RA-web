@@ -87,9 +87,8 @@
                     <input type="text" class="form-control" placeholder="แนวทางปฏิบัติเพื่อให้สอดคล้อง">
                 </div>
                 <div class="col-1">
-                    <span class="material-icons-sharp">add_circle</span> 
+                    <a><span class="material-icons fa-10x" style="color: green;">add_circle</span> </a>
                 </div>
-                
             </div>
         </form>
 
@@ -106,16 +105,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="fontSarabun">
-                    <td>ให้ยกเลิกกฎกระทรวงกำหนดมาตรฐานในการบริหารและการจัดการด้านความปลอดภัย อาชีวอนามัย และสภาพแวดล้อมในการทำงานเกี่ยวกับรังสีชนิดก่อไอออน พ.ศ. 2547</td>
-                    <td class="centerText">-</td>
-                    <td class="centerText">-</td>
-                    <td class="centerText">เพื่อทราบ</td>
+                <tr class="fontSarabun" *ngFor="let item of KeyactData">
+                    <td class="centerText">{{item.keyreq}}</td>
+                    <td class="centerText">{{item.standard}}</td>
+                    <td class="centerText">{{item.frequency}}</td>
+                    <td class="centerText">{{item.practice}}</td>
                     <td> 
-                        <span class="material-icons-sharp">edit</span>  
+                        <span class="material-icons">edit</span>  
                     </td>
                     <td> 
-                        <span class="material-icons-sharp">delete</span> 
+                        <span class="material-icons">delete</span> 
                     </td>
 
                 </tr>
