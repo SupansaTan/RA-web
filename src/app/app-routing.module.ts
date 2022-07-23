@@ -7,7 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AssignLawComponent } from './components/assign-law/assign-law.component';
 import { AssignDetailComponent } from './components/assign-law/assign-detail/assign-detail.component';
 import { ConfigEmployeeComponent } from './components/config-employee/config-employee.component';
+import { AddEmployeeComponent } from './components/config-employee/add-employee/add-employee.component';
 import { ConfigLocationComponent } from './components/config-location/config-location.component';
+import { AddLocationComponent } from './components/config-location/add-location/add-location.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'assignlaw', component: AssignLawComponent},
   { path: 'assignlaw/:id', component: AssignDetailComponent},
   { path: 'configemployee', component: ConfigEmployeeComponent},
+  { path: 'addemployee', component: AddEmployeeComponent},
   { path: 'configlocation', component: ConfigLocationComponent},
+  { path: 'addlocation', component: AddLocationComponent},
   { path: 'signin', component: SignInComponent},
   { path: 'assignlaw/:id', component: AssignDetailComponent},
 

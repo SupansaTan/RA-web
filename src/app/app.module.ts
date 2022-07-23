@@ -16,6 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
 import { AssignDetailComponent } from './components/assign-law/assign-detail/assign-detail.component';
+import { AddEmployeeComponent } from './components/config-employee/add-employee/add-employee.component';
+import { AddLocationComponent } from './components/config-location/add-location/add-location.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { AssignDetailComponent } from './components/assign-law/assign-detail/ass
     SignInComponent,
     HeaderComponent,
     AssignDetailComponent,
+    AddLocationComponent,
+    AddEmployeeComponent,
   ],
   imports: [
     BrowserModule,
