@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div style="margin-bottom: 10px">
+        <span class="material-icons" style="color: green; margin-right: 5px;">add_circle</span>
+        <h4 class="fontMirt" style="display:inline;">เพิ่มพนักงาน</h4>
+    </div>
+
+    <form class="fontMirt" style="margin-top: 40px;">
+        <div class="form-group row inputblock">
+            <label  class="col-sm-2 col-form-label">ชื่อ</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLawName" placeholder="ชื่อ">
+            </div>
+        </div>
+        <div class="form-group row inputblock">
+            <label  class="col-sm-2 col-form-label">สกุล</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLawName" placeholder="สกุล">
+            </div>
+        </div>
+        <div class="form-group row inputblock">
+            <label  class="col-sm-2 col-form-label">เลขบัตรประชาชน</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputLawName" placeholder="เลขบัตรประชาชน">
+            </div>
+        </div>
+        <div class="form-group inputblock" >
+            <label  class="col-sm-2 col-form-label">ตำแหน่งในโรงงาน</label>
+            <br/>
+            <div style="margin-top: 10px; margin-left: 50px;">
+                <input type="checkbox" id="Admin" style="margin-right:10px;" [(ngModel)]="isAdmin" (change)="isAdmin = !isAdmin">
+                <label style="margin-right:50px;"> Admin</label>
+                <input type="checkbox" id="Other" style="margin-right:10px;" [(ngModel)]="isOther" (change)="isOther = !isOther"/>
+                <label style="margin-right:50px;"> Other</label>
+                <div class="inputblock" *ngIf="isOther">
+                    <label style="margin-right: 10px;">โรงงาน</label>
+                    <select>
+                        <option>โรงงาน</option>
+                        <option>A</option>
+                        <option>B</option>
+                    </select> 
+                    <label style="margin-right: 10px;">ตำแหน่ง</label>
+                    <select>
+                        <option>ตำแหน่ง</option>
+                        <option>A</option>
+                        <option>B</option>
+                    </select> 
+                    <button type="submit" class="addbtn btn btn-primary" style="color: black;">เพิ่ม</button>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="submitbtn btn btn-primary">เพิ่มพนักงาน</button>
+    </form>
+
+</div>
