@@ -15,12 +15,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td scope="row" class="centerText">1</td>
-            <td>ประกาศกรมสวัสดิการและคุ้มครองแรงงาน เรื่อง การส่งรายงานผลการตรวจวัดและวิเคราะห์สภาวะการทำงานเกี่ยวกับความร้อนแสงสว่างและเสียงภายในสถานประกอบกิจการทางอิเล็กทรอนิกส์ </td>
-            <td class="centerText">16/5/2549</td>
-            <td class="centerText">21/5/2549</td>
-            <td class="centerText">-</td>
+          <tr *ngFor="let law of LawList; let index = index">
+            <td scope="row" class="centerText">{{index+1}}</td>
+            <td>{{law.title}}</td>
+            <td class="centerText">{{law.announcedate}}</td>
+            <td class="centerText">{{law.enforcedate}}</td>
+            <td class="centerText">{{law.canceldate}}</td>
             <td class="centerText">
                 <a href="home">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-filetype-pdf" viewBox="0 0 16 16">

@@ -51,8 +51,8 @@ export class AddLawComponent implements OnInit {
   ];
 
   KeyactData: KetactElement[] = [
-    {id:1, keyreq:'A', standard:'AAA', frequency:'ทุก 1 ปี', practice:'action1'},
-    {id:2, keyreq:'B', standard:'BBB', frequency:'ทุก 2 ปี', practice:'action2'}
+    {id:1, keyreq:'keyreq 1', standard:'standard 1', frequency:'ทุก 1 ปี', practice:'action1'},
+    {id:2, keyreq:'keyreq 2', standard:'standard 2', frequency:'ทุก 2 ปี', practice:'action2'}
   ];
 
   constructor() {

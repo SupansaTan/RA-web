@@ -32,10 +32,12 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="fontSarabun">
-                <td class="centerText">A B</td>
-                <td class="centerText">A@cpf.cp.th</td>
-                <td class="centerText">โรงงาน A</td>
+            <tr class="fontSarabun" *ngFor="let emp of EmployeeList; let index = index">
+                <td class="centerText">{{emp.name}}</td>
+                <td class="centerText">{{emp.email}}</td>
+                <td class="centerText" >
+                    <p *ngFor="let duty of emp.duties;">{{duty.role}} - {{duty.location}}</p>
+                </td>
                 <td> 
                     <span class="material-icons-sharp">edit</span>  
                 </td>

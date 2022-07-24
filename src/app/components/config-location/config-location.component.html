@@ -47,11 +47,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="fontSarabun">
-                <td class="centerText">โรงงาน A</td>
-                <td class="centerText">Farm</td>
-                <td class="centerText">ธุรกิจสุกร</td>
-                <td class="centerText">สายงานเลี้ยงสุกร</td>
+            <tr class="fontSarabun" *ngFor="let location of LocationList; let index = index">
+                <td class="centerText">{{location.name}}</td>
+                <td class="centerText">{{location.buType}}</td>
+                <td class="centerText">{{location.IU}}</td>
+                <td class="centerText">{{location.buLine}}</td>
                 <td> 
                     <span class="material-icons-sharp">edit</span>  
                 </td>

@@ -12,4 +12,16 @@ export class ConfigLocationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  LocationList: LocationElement[] = [
+    {name: 'โรงงาน A', buType: 'Farm', IU: 'ธุรกิจสุกร', buLine: 'สายงานเลี้ยงสุกร'},
+    {name: 'โรงงาน B', buType: 'Feed', IU: 'ธุรกิจผลิตอาหารสัตว์บก', buLine: 'สายงานผลิตอาหารสุกร'}
+  ]
+
+}
+
+export interface LocationElement {
+  name: string;
+  buType: string;
+  IU: string;
+  buLine: string;
 }
