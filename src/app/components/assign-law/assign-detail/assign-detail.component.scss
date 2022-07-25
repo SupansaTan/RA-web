@@ -17,9 +17,8 @@ h4 {
     margin-bottom: 40px;
 }
 
-h5 {
-    margin-top: 50px;
-    margin-bottom: 20px;
+.lawdetail {
+    margin-block: 20px;
 }
 
 .submitbt {
@@ -67,4 +66,13 @@ td {
 
 .centerText {
     text-align: center;
+}
+
+.greencard {
+    background: rgb(203, 255, 227);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    
 }

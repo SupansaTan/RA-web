@@ -3,10 +3,30 @@
 <div class="container">
 
     <h4 class="fontMitr">มอบหมายงาน</h4>
+    <div class="fontMitr greencard">
+        <h5 style="margin-top: 10px;"><b>ข้อมูลกฎหมาย</b></h5>
+        <div class="row lawdetail">
+            <div class="col-2">ชื่อกฎหมาย : </div>
+            <div class="col-8">{{LawData.title}}</div>
+        </div>
+        <div class="row lawdetail">
+            <div class="col-2">วันที่ประกาศ : </div>
+            <div class="col-8">{{LawData.announcedate}}</div>
+        </div>
+        <div class="row lawdetail">
+            <div class="col-2">วันที่บังคับใช้ : </div>
+            <div class="col-8">{{LawData.enforcedate}}</div>
+        </div>
+        <div class="row lawdetail">
+            <div class="col-2">วันที่ยกเลิก : </div>
+            <div class="col-8">{{LawData.canceldate}}</div>
+        </div>
+    </div>
+    
 
     <div class="selectitem fontMitr">
-        <label  class="col-sm-2 col-form-label">ระบบที่เกี่ยวข้อง</label>
-        <ngx-bootstrap-multiselect [options]="systemOptions" [(ngModel)]="systemModel" (ngModelChange)="onChange"></ngx-bootstrap-multiselect>
+        <label  class="col-sm-2 col-form-label">ประเภทธุรกิจ</label>
+        <ngx-bootstrap-multiselect [options]="buTypeOptions" [(ngModel)]="systemModel" (ngModelChange)="onChange"></ngx-bootstrap-multiselect>
     </div>
 
     <ng-template #content let-modal>
