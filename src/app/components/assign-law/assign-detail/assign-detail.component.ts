@@ -73,12 +73,20 @@ export class AssignDetailComponent implements OnInit {
     allSelected: 'All selected',
   };
 
-  systemOptions: IMultiSelectOption[] = [
-    { id: 1, name: 'CPF SHE & En MS'},
-    { id: 2, name: 'ISO 14001'},
-    { id: 3, name: 'OSHAS 18001'},
-    { id: 4, name: 'ISO50001'},
+  buTypeOptions: IMultiSelectOption[] = [
+    { id: 1, name: 'Feed'},
+    { id: 2, name: 'Farm'},
+    { id: 3, name: 'Food'},
+    { id: 4, name: 'Other'},
   ];
+
+  LawData : LawElement = {
+    title:'Law1',
+    announcedate:'1/2/65',
+    enforcedate:'1/3/65',
+    canceldate:'-',
+    fileUrl:'Law1.pdf'
+  }
 
   onChange() {
     console.log(this.systemModel);
@@ -101,6 +109,14 @@ export interface BusinessLineElement {
   id: number;
   checked: boolean;
   businessLine: string;
+}
+
+export interface LawElement {
+  title: string;
+  announcedate: string;
+  enforcedate: string;
+  canceldate: string;
+  fileUrl: string;
 }
 
 
